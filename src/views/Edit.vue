@@ -5,7 +5,7 @@
         <a @click.prevent="backRoute" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
       </div>
       <div class="grid-cols-1 text-white text-left text-2xl pb-8">
-        <h2>Изменить ваше данные</h2>
+        <h2>Редактировать профиль</h2>
       </div>
       <div class="grid grid-cols-6 gap-2 bg-white rounded-lg py-4">
           <div class="col-span-2 mx-auto flex">
