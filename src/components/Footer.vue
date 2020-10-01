@@ -19,7 +19,7 @@
         <div class="col-span-3 xl:col-span-1 lg:col-span-1 mt-8 xl:mb-0 lg:mb-0 mb-12 pl-4 xl:pl-0 lg:pl-0">
           <p class="text-white font-semibold">Найдите Нас Здесь.</p>
           <div class="social flex text-center text-white mt-6">
-            <li class="block w-10 h-10 pt-2  facebook text-center rounded-full"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="block w-10 h-10 pt-2  facebook text-center rounded-full"><a href="https://instagram.com/protaguz?igshid=1j4iry455m4dn"><i class="fab fa-facebook-f"></i></a></li>
             <li class="block w-10 h-10 pt-2 instagram ml-4 text-center rounded-full"><a href="https://instagram.com/protaguz?igshid=1j4iry455m4dn"><i class="fab fa-instagram"></i></a></li>
             <li class="block w-10 h-10 pt-2  telegram ml-4 text-center rounded-full"><a href="https://t.me/protag1"><i class="fab fa-telegram-plane"></i></a></li>
           </div>

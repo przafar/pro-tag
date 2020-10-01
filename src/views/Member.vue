@@ -2,7 +2,7 @@
   <div class="back-color">
     <div :style="{ backgroundColor: user.profile.back }" class="h-48 w-full token-color mx-auto">
       <div class="container">
-        <a href=""><img class="w-12 ml-4 pt-4" src="../assets/css/logo (1).png" alt=""></a>
+        <a href="/"><img class="w-12 ml-4 pt-4" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logo.png?alt=media&token=08cc9dd0-1e2d-4748-b02f-19c89bca7910" alt=""></a>
       </div>
     </div>
     <div class="container member mx-auto px-5">

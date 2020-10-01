@@ -8,7 +8,7 @@
             :adaptive="true" 
             name="modal">
       <div class="logo mt-8">
-        <img class="mx-auto" src="../assets/css/Untitled-1.png" alt="">
+        <img class="mx-auto" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/Untitled-1.png?alt=media&token=7f56f310-4943-4496-aace-66d2da242f0f" alt="">
       </div>
       <div class="w-full">
         <form @submit.prevent="submitHandler" class="bg-white px-8 pt-6 pb-8 mb-4">
@@ -30,7 +30,7 @@
             <button type="submit" class="button-modal text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Войти
             </button>
-            <a class="inline-block align-baseline font-bold text-sm forget-modal" href="#">
+            <a class="inline-block align-baseline font-bold text-sm forget-modal" href="https://t.me/protag1">
               Забыли пароль?
             </a>
           </div>
