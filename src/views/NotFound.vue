@@ -10,7 +10,7 @@
 
           <h2 class="text-5xl mt-24">404</h2>
           <div class="mt-12">
-          <a class="home py-3 px-5 rounded-lg text-white" href="">На главную</a>
+          <a class="home py-3 px-5 rounded-lg text-white" href="/">На главную</a>
           </div>
         </div>
         
