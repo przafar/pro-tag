@@ -24,7 +24,7 @@ export default {
           {
             html: 'slide2',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=c2fd8db8-aad5-4dd7-a45a-83b329446f8f'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=678d768e-3638-406e-a9f3-cd768af9851c'
             }
           },
           {
@@ -57,7 +57,7 @@ export default {
   }
   @media screen and (min-width: 330px) and (max-width: 640px) {
     .slider {
-      height: 16rem;
+      height: 15.5rem;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 330px) {

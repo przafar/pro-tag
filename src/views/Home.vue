@@ -7,7 +7,7 @@
         <p class="text-lg">Поднимите свою жизнь на новый уровень!</p>
       </div>
       <div class="grid-cols-12 mb-20 mt-3 lg:mb-20 xl:mb-20 header-u">
-        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/header.PNG?alt=media&token=92e8e474-c184-49bc-8781-2749e70bb746" alt="">
+        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/145-1453218_iphone-11-pro-max-hd-png-download.png?alt=media&token=7e3387e2-af85-4aaa-86ed-f2798104f3ce" alt="">
       </div>
     </div>
     <div class="section-1 text-white">
@@ -210,7 +210,7 @@ export default {
 <style scoped>
   .home {
     background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/willian-justen-de-vasconcellos-_MMP5j_fCqw-unsplash.jpg?alt=media&token=cee8d7cb-3bd4-40a0-bf92-0d8cdf87dbc6");
-    height: 680px;
+    height: 700px;
     background-position: top; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -221,8 +221,8 @@ export default {
     height: 350px;
   }
   .header {
-    height: 350px;
-    margin-top: 0px;
+    height: 340px;
+    margin-top: 10px;
     z-index: -1;
     opacity: 0.9;
     overflow: hidden  

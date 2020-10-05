@@ -34,7 +34,7 @@
       <div class="grid-cols-1 mt-2">
         <form class="w-full">
           <div class="w-full text-left">
-            <h4 class="block tracking-wide text-white ml-2 mb-2">Instagram например: protaguz</h4>
+            <h4 class="block tracking-wide text-white ml-2 mb-2">Instagram например: protaguz Без @</h4>
             <input v-model="instagram"  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Без @">
           </div>
         </form>
@@ -42,7 +42,7 @@
       <div class="grid-cols-1 mt-2">
         <form class="w-full">
           <div class="w-full text-left">
-            <h4 class="block tracking-wide text-white ml-2 mb-2">Telegram например: protaguz</h4>
+            <h4 class="block tracking-wide text-white ml-2 mb-2">Telegram например: protaguz Без @</h4>
             <input v-model="telegram" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Без @">
           </div>
         </form>

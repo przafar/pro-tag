@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import User from '../views/user.vue'
 import Edit from '../views/Edit.vue'
 import Member from '../views/Member.vue'
+import Admin from '../views/Admin.vue'
 import UserInfo from '../views/userInfo.vue'
 import Userurl from '../views/userurl.vue'
 import Back from '../views/Back.vue'
@@ -53,6 +54,12 @@ const router = new VueRouter({
       name: "Edit",
       component: Edit,
       meta: {layout: 'Edit', auth: true}
+    },
+    {
+      path: '/Admin',
+      name: "Admin",
+      component: Admin,
+      meta: {layout: 'Admin', auth: true}
     },
     {
       path: '/UserInfo',
