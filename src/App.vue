@@ -29,7 +29,7 @@
         mounted() {
           setTimeout(() => {
             this.isLoading = false
-          }, 3000)
+          }, 2200)
         },
         components: {
             Loading

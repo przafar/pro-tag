@@ -2,11 +2,11 @@
   <div class="back-color">
     <div :style="{ backgroundColor: user.profile.back }" class="h-48 w-full token-color mx-auto">
       <div class="container">
-        <a href="/"><img class="w-12 ml-4 pt-4" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logo.png?alt=media&token=08cc9dd0-1e2d-4748-b02f-19c89bca7910" alt=""></a>
+        <a href="/"><img class="w-12 ml-4 pt-4" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logonew.png?alt=media&token=cc63ca80-2a4f-409b-acd2-1782383d66fb" alt=""></a>
       </div>
     </div>
     <div class="container member mx-auto px-5">
-        <div class="grid grid-cols-6 gap-4 shadow-2xl bg-white rounded-lg px-3 py-4" v-if="user.profile.name.length > 1">
+        <div class="grid grid-cols-6 gap-2 shadow-2xl bg-white rounded-lg px-3 py-4" v-if="user.profile.name.length > 1">
           <div class="col-span-2 flex">
             <img class="object-cover xl:h-32 lg:h-32 xl:w-32 lg:w-32 w-24 h-24 rounded-full bg-gray-500" :src="user.profile.photo" alt="">
           </div>
@@ -14,7 +14,7 @@
             <p v-if="user.profile.name.length > 3" class="font-semibold text-2xl">{{ user.profile.name }}</p>
             <p class="text-xl font-semibold">{{ user.profile.userInfo }}</p>
           </div>
-          <div v-if="user.profile.instagram.length > 3" class="col-span-6 mx-auto">
+          <div v-if="user.profile.instagram.length > 3" class="col-span-6 mx-auto mt-6">
             <a :href="('https://instagram.com/' + user.profile.instagram)" class="flex shadow-2xl text-2xl w-48 h-16 py-3 px-4 rounded-lg instagram text-white">
               <i class="fab fa-instagram pt-2"></i>
               <p class="mx-auto">Instagram</p>

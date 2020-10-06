@@ -7,7 +7,7 @@
         <p class="text-lg">Поднимите свою жизнь на новый уровень!</p>
       </div>
       <div class="grid-cols-12 mb-20 mt-3 lg:mb-20 xl:mb-20 header-u">
-        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/145-1453218_iphone-11-pro-max-hd-png-download.png?alt=media&token=7e3387e2-af85-4aaa-86ed-f2798104f3ce" alt="">
+        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/header%20(3).PNG?alt=media&token=e37f5359-a691-4fb1-81fd-68eff16a63fb" alt="">
       </div>
     </div>
     <div class="section-1 text-white">
