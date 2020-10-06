@@ -4,7 +4,7 @@
       <div class="grid grid-cols-3 gap-4">
         <div class="col-span-3 xl:col-span-1 lg:col-span-1 pl-4 xl:pl-0 lg:pl-0">
           <div class="logo flex mt-10 ">
-            <img class="w-10" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logonew.png?alt=media&token=cc63ca80-2a4f-409b-acd2-1782383d66fb" alt="">
+            <img class="w-10 h-12" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logonew.png?alt=media&token=cc63ca80-2a4f-409b-acd2-1782383d66fb" alt="">
             <h2 class="font-mono text-3xl font-semibold ml-4 text-white">ProTag</h2>
           </div>
           <div class="logo-info text-white mt-4 mb-4 xl:mt-10 lg:mt-10 xl:mb-12 lg:mb-12">
