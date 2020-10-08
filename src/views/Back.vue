@@ -7,29 +7,29 @@
       <div class="grid-cols-1 text-white text-left text-2xl pb-8">
         <h2>Выберите обложку</h2>
       </div>
-      <div :style="{ backgroundColor: this.color }" class="grid grid-cols-6 gap-4 w-full h-40 sm:h-32 rounded-lg">
+      <div :style="{ backgroundColor: this.color }" class="grid grid-cols-6 gap-4 w-full h-40 sm:h-32 rounded-lg back-mobile">
 
       </div>
       <div class="px-2">
-        <div class="grid grid-cols-6 gap-2 bg-white rounded-lg py-2 login-page">
+        <div class="grid grid-cols-6 gap-2 bg-white rounded-lg py-2 login-page poso">
           <div class="col-span-2 flex mt-2 mx-auto">
             <img class="object-cover w-20 h-20 sm:h-20 sm:w-20 xl:h-32 lg:h-32 xl:w-32 lg:w-32 rounded-full bg-gray-500" :src="info.profile.photo" alt="">
           </div>
           <div class="col-span-4 pt-2 font-semibold text-2xl text-gray-800">
             <p>{{ info.profile.name }}</p>
             <div class="flex pt-3 text-gray-800 xl:mr-24 lg:mr-24 xl:mt-4">
-              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto">
+              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto logot">
                 <i class="fab fa-instagram"></i>
               </div>
-              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto">
+              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto logot">
                 <i class="fab fa-tiktok"></i>
 
               </div>
-              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto">
+              <div class="bg-gray-400 w-10 h-10 mr-1 rounded-lg mx-auto logot">
                 <i class="fab fa-telegram-plane"></i>
 
               </div>
-              <div class="bg-gray-400 w-10 h-10 mr-2 rounded-lg mx-auto">
+              <div class="bg-gray-400 w-10 h-10 mr-2 rounded-lg mx-auto logot">
                 <i class="fab fa-facebook-f"></i>
               </div>
             </div>
@@ -137,5 +137,28 @@ export default {
   }
   .login-page {
     margin-top: -55px;
+  }
+  .logot {
+    padding-top: 1px;
+  }
+  @media screen and (min-width: 280px) and (max-width: 320px) {
+    .back-color {
+      background-color: #000000;
+      background-image: linear-gradient(315deg, #000000 0%, #111111 74%);
+      height: 100%;
+    }
+    .logot {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      padding-top: 1px;
+    }
+    .poso {
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+    .back-mobile {
+      height: 8rem;
+    }
   }
 </style>

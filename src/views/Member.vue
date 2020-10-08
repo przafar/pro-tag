@@ -8,7 +8,7 @@
     <div class="container member mx-auto px-5">
         <div class="grid grid-cols-6 gap-2 shadow-2xl bg-white rounded-lg px-3 py-4" v-if="user.profile.name.length > 1">
           <div class="col-span-2 flex">
-            <img class="object-cover xl:h-32 lg:h-32 xl:w-32 lg:w-32 w-24 h-24 rounded-full bg-gray-500" :src="user.profile.photo" alt="">
+            <img class="object-cover img-mobile xl:h-32 lg:h-32 xl:w-32 lg:w-32 w-24 h-24 rounded-full bg-gray-500" :src="user.profile.photo" alt="">
           </div>
           <div class="col-span-4 pt-3 text-gray-800">
             <p v-if="user.profile.name.length > 3" class="font-semibold text-2xl">{{ user.profile.name }}</p>
@@ -130,6 +130,12 @@ export default {
   }
   .youtube {
     background: #FF0000;
+  }
+  @media screen and (min-width: 300px) and (max-width: 340px) {
+    .img-mobile {
+      width: 80px;
+      height: 80px;
+    }
   }
   
 </style>

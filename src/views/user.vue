@@ -149,5 +149,25 @@ export default {
     min-height: 100%;
     height: 100%;
   }
+  .logot {
+    padding-top: 1px;
+  }
+  @media screen and (min-width: 280px) and (max-width: 320px) {
+    .back-color {
+      background-color: #000000;
+      background-image: linear-gradient(315deg, #000000 0%, #111111 74%);
+      height: 100%;
+    }
+    .logot {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      padding-top: 1px;
+    }
+    .poso {
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+  }
   
 </style>

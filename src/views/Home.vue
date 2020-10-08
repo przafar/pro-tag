@@ -3,7 +3,7 @@
     <div class="home">
       <Header/>
       <div v-scrollanimation class="justify-center text-center header-font text-white font-sans lg:mt-4 xl:mt-4 mt-8 ">
-        <h1 class="xl:text-4xl lg:text-4xl text-3xl font-semibold tracking-tight sm:text-1xl">Поделитесь своими социальными сетями<br/>и бизнесом одним касанием</h1>
+        <h1 class="xl:text-4xl lg:text-4xl text-3xl font-semibold tracking-tight sm:text-2xl">Поделитесь своими социальными сетями<br/>и бизнесом одним касанием</h1>
         <p class="text-lg">Поднимите свою жизнь на новый уровень!</p>
       </div>
       <div class="grid-cols-12 mb-20 mt-3 lg:mb-20 xl:mb-20 header-u">
@@ -155,8 +155,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
     <Footer/>
-  
-
   </div>
 </template>
 
@@ -165,13 +163,12 @@ import Header from '../components/Header.vue'
 import Slider from '../components/Slider.vue'
 import Footer from '../components/Footer.vue'
 
-
 export default {
   name: 'Home',
   data: () => ({
     visible: false,
     animate: true,
-    product: []
+    product: [],
   }),
   methods: {
     scrollTop: function () {

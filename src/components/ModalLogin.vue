@@ -8,7 +8,7 @@
             :adaptive="true" 
             name="modal">
       <div class="logo mt-8">
-        <img class="mx-auto" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/Untitled-1.png?alt=media&token=7f56f310-4943-4496-aace-66d2da242f0f" alt="">
+        <img class="mx-auto" :src="logo" alt="">
       </div>
       <div class="w-full">
         <form @submit.prevent="submitHandler" class="bg-white px-8 pt-6 pb-8 mb-4">
@@ -47,6 +47,7 @@ import { required, minLength } from 'vuelidate/lib/validators'
 
 export default {
   name: 'MyComponent',
+  props: ['logo'],
   data: () => ({
     email: '',
     password: ''

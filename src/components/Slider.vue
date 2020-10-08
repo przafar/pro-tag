@@ -61,6 +61,8 @@ export default {
     }
   }
   @media screen and (min-width: 280px) and (max-width: 330px) {
-
+    .slider {
+      height: 13rem;
+    }
   }
 </style>
