@@ -206,7 +206,7 @@ export default {
 </script>
 <style scoped>
   .home {
-    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/willian-justen-de-vasconcellos-_MMP5j_fCqw-unsplash.jpg?alt=media&token=cee8d7cb-3bd4-40a0-bf92-0d8cdf87dbc6");
+    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180.jpg?alt=media&token=a275cd82-9ccb-49c2-a39b-50a4b615f267");
     height: 700px;
     background-position: top; 
     background-repeat: no-repeat; 
@@ -262,7 +262,7 @@ export default {
     cursor: pointer;
   }
   .section-4 {
-    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/footer.png?alt=media&token=e8b439e6-9411-44ef-babc-0cd731694cf4") no-repeat;
+    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180footer.png?alt=media&token=4475cc48-8b24-4e37-a5c8-5e17d8a332fa") no-repeat;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
