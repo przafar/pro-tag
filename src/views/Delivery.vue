@@ -12,7 +12,7 @@
               <h3 class="text-3xl font-semibold">Доставка интернет магазина PROTAG.UZ</h3>
             </div>
           </div>
-          <div class="col-span-1 mt-12">
+          <div class="col-span-1 mt-24">
             <h4 class="text-2xl font-semibold">Ташкент</h4>
             <p class="font-semibold">Стоимость доставки – 25 000 сум</p>
           </div>
@@ -45,6 +45,9 @@ export default {
      background: #667db6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .footer {
+    margin-top: 13%;
   }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="bg-gray-200 h-screen">
     <div class="contaner mx-auto">
-      <div class="delivery bg-gray-200 text-gray-900">
+      <div class="delivery  text-gray-900">
         <div class="navbar">
           <Header/>
         </div>
@@ -17,7 +17,7 @@
             <h4 class="mt-4">Официальный Канал в Telegram: @protag</h4>
           </div>
         </div>
-        <div class="mt-24">
+        <div class="mt-24 footer">
           <Footer/>
         </div>
       </div>
@@ -35,9 +35,12 @@ export default {
 </script>
 <style scoped>
   .navbar {
-     background: #667db6;  /* fallback for old browsers */
+    background: #667db6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .footer {
+    margin-top: 15%;
   }
 
 </style>

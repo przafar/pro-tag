@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full back-color">
+  <div class="back-color">
     <div class="container mx-auto text-center pt-10 px-6">
       <div class="grid-cols-1 text-left pb-8">
         <a @click.prevent="backRoute" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
@@ -125,9 +125,9 @@ export default {
   .back-color {
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #111111 74%);
-    height: auto !important;
     min-height: 100%;
-    height: 100%;
+    background-attachment: fixed;
+    width: 100%;
   }
   .logot {
     padding-top: 1px;

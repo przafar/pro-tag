@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div class="vld-parent">
+        <loading :active.sync="isLoading" 
+        :can-cancel="true" 
+        color="#00D2FC"
+        loader="dots"
+        background="#fff"
+        opacity="1"
+        ></loading>
+    </div>
     <div class="home">
       <Header/>
       <div v-scrollanimation class="justify-center text-center header-font text-white font-sans lg:mt-4 xl:mt-4 mt-8 ">
@@ -162,6 +171,8 @@
 import Header from '../components/Header.vue'
 import Slider from '../components/Slider.vue'
 import Footer from '../components/Footer.vue'
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 
 export default {
   name: 'Home',
@@ -169,7 +180,16 @@ export default {
     visible: false,
     animate: true,
     product: [],
+    isLoading: true
   }),
+  async mounted() {
+    this.product = await this.$store.dispatch('fetchAmount')
+    window.addEventListener('scroll', this.scrollListener)
+    setTimeout(function () {
+      return this.phone = true
+    }, 1000)
+    this.isLoading = false
+  },
   methods: {
     scrollTop: function () {
       this.intervalId = setInterval(() => {
@@ -186,33 +206,22 @@ export default {
       this.animate=false;
    }
   },
-  async mounted() {
-    this.product = await this.$store.dispatch('fetchAmount')
-    window.addEventListener('scroll', this.scrollListener)
-    setTimeout(function () {
-      return this.phone = true
-    }, 1000)
-  },
-  beforeDestroy: function () {
-    window.removeEventListener('scroll', this.scrollListener)
-  },
   components: {
     Header,
     Slider,
     Footer,
-
+    Loading
   }
 }
 </script>
 <style scoped>
   .home {
-    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180.jpg?alt=media&token=a275cd82-9ccb-49c2-a39b-50a4b615f267");
-    height: 700px;
+    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180.jpg?alt=media&token=ca125506-dfe8-4234-b0e2-cc82bbf6a132");
+    height: 725px;
     background-position: top; 
     background-repeat: no-repeat; 
     background-size: cover;
     box-shadow: 0px 1px 10px -10px rgba(0,0,0,0.75);
-
   }
   .header-u {
     height: 350px;
