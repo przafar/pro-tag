@@ -5,7 +5,7 @@
         <div class="navbar">
           <Header/>
         </div>
-        <div class="grid-cols-2 container mx-auto">
+        <div class="grid-cols-2 container mx-auto px-2">
           <div class="col-span-2 text-center mt-12">
             <h2 class="text-4xl font-semibold">Контакты</h2>
             <p class="text-3xl font-semibold mb-4">Наша команда свяжется с вами в ближайшее время</p>

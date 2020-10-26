@@ -42,7 +42,7 @@
             <li class="mt-2 text-lg">Moto P50, Moto X4, Moto Z3, Moto Z3 Play</li>
           </div>
           <div class="link px-2">
-            <a href="https://www.nfcw.com/nfc-phones-list/#:~:text=Apple%20iPhone%2012%2C%20iPhone%2012,7%20and%20iPhone%207%20Plus">Телефоны NFC</a>
+            <a href="https://www.nfcw.com/nfc-phones-list/#:~:text=Apple%20iPhone%2012%2C%20iPhone%2012,7%20and%20iPhone%207%20Plus">Телефоны с NFC</a>
           </div>
         </div>
         <div class="mt-24">
