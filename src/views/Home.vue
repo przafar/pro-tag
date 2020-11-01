@@ -5,6 +5,7 @@
         :can-cancel="true" 
         color="#00D2FC"
         loader="dots"
+        :on-cancel="onCancel"
         background="#fff"
         opacity="1"
         ></loading>
@@ -180,15 +181,17 @@ export default {
     visible: false,
     animate: true,
     product: [],
-    isLoading: true
+    isLoading: true,
+    fullPage: false,
   }),
   async mounted() {
+    this.isLoading = false
+
     this.product = await this.$store.dispatch('fetchAmount')
     window.addEventListener('scroll', this.scrollListener)
     setTimeout(function () {
       return this.phone = true
     }, 1000)
-    this.isLoading = false
   },
   methods: {
     scrollTop: function () {
