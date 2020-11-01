@@ -41,7 +41,7 @@
           <div v-if="user.profile.payme.length > 3" class="col-span-6 mx-auto">
             <a :href="user.profile.payme" class="flex shadow-2xl">
               <div class="payme rounded-lg w-48 h-16 pt-1">
-              <img class="h-auto w-auto py-1 px-4  " src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/payme_01.png?alt=media&token=5ab737d7-4d2d-4cbf-9853-e02107fab461" alt="">
+              <img class="h-auto w-auto py-1 px-4  " src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/payme_01.png?alt=media&token=7cbaffa6-24c6-495c-9561-2535db1a47be" alt="">
               </div>
             </a>
           </div>

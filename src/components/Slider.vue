@@ -24,7 +24,7 @@ export default {
           {
             html: 'slide2',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=678d768e-3638-406e-a9f3-cd768af9851c'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=648380f7-e203-4135-9600-69ed0fa0d1dc'
             }
           },
           {

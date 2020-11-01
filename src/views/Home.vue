@@ -17,7 +17,7 @@
         <p class="text-lg">Поднимите свою жизнь на новый уровень!</p>
       </div>
       <div class="grid-cols-12 mb-20 mt-3 lg:mb-20 xl:mb-20 header-u">
-        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/header%20(3).PNG?alt=media&token=e37f5359-a691-4fb1-81fd-68eff16a63fb" alt="">
+        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/header%20(3)%20(1).PNG?alt=media&token=59beec46-9fea-4958-a5f4-0fe89c529dbf" alt="">
       </div>
     </div>
     <div class="section-1 text-white">
@@ -47,7 +47,7 @@
               <h2>Он автоматически появится на телефоне другого человека!</h2>
             </div>
             <div v-scrollanimation class="w-48 mb-20 mx-auto mt-8">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/Untitled-22.png?alt=media&token=d9668634-df0d-4bae-a35f-87e7510beb95" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/Untitled-22.png?alt=media&token=103a1b33-eca5-4a44-aff7-d6f7184ec53d" alt="">
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="mb-12 grid grid-cols-4 gap-4 sm:flex-1 px-4">
           <div class="col-span-4 xl:col-span-2 lg:col-span-2">
             <div class="sample-2 ml-1">
-              <img v-scrollanimation class="rounded shadow-xl w-full md:h-full" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/Designer.jpg?alt=media&token=6050e99b-a55a-4ab7-9449-021f8b7ee9e7" alt="">
+              <img v-scrollanimation class="rounded shadow-xl w-full md:h-full" src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/Designer.jpg?alt=media&token=241bd835-53f5-4a2d-a894-bd21e5676d0a" alt="">
             </div>
           </div>
           <div class="col-span-4 xl:col-span-2 lg:col-span-2">
@@ -110,7 +110,7 @@
         <div class="grid grid-cols-5 gap-4 px-4 xl:px-0 lg:px-0">
           <div v-scrollanimation class="xl:col-start-2 xl:col-end-3 lg:col-start-2 lg:col-end-3 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
             <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/download%20(1).png?alt=media&token=23872cbd-b8b4-49de-8cd4-b415f218cd8c" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/download%20(1).png?alt=media&token=30518b98-87c9-47b6-be1a-750576367bbd" alt="">
             </div>
             <div class="tag-price text-center pt-4">
               <h4 class="text-blue-600 font-semibold">{{ product.amountSimple }} сум</h4>
@@ -131,7 +131,7 @@
           </div>    
           <div v-scrollanimation class="xl:col-start-3 xl:col-end-4 lg:col-start-3 lg:col-end-4 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
             <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/capitan.png?alt=media&token=408cdc85-5a86-472c-8e3c-51102d5e7d23" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/capitan.png?alt=media&token=9621f225-a691-4c46-9767-b10b3a148086" alt="">
             </div>
             <div class="tag-price text-center pt-4">
               <h4 class="text-blue-600 font-semibold">{{ product.amountLimited }} сум</h4>
@@ -145,7 +145,7 @@
           </div>
           <div v-scrollanimation class="xl:col-start-4 xl:col-end-5 lg:col-start-4 lg:col-end-5 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4 mb-8 xl:mb-12 lg:mb-12">
             <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/custom-logo.png?alt=media&token=f0ba2106-6865-40c7-b65e-b9a8004910df" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/custom-logo.png?alt=media&token=37c5d606-853e-44eb-98dd-589832104c09" alt="">
             </div>
             <div class="tag-price text-center pt-4">
               <h4 class="text-blue-600 font-semibold">{{ product.amountCustom }} сум</h4>
@@ -185,8 +185,9 @@ export default {
     fullPage: false,
   }),
   async mounted() {
-    this.isLoading = false
     this.product = await this.$store.dispatch('fetchAmount')
+    this.isLoading = false
+
     window.addEventListener('scroll', this.scrollListener)
     setTimeout(function () {
       return this.phone = true
@@ -218,7 +219,7 @@ export default {
 </script>
 <style scoped>
   .home {
-    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180.jpg?alt=media&token=ca125506-dfe8-4234-b0e2-cc82bbf6a132");
+    background: url("https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/3302180.jpg?alt=media&token=17521e35-40ed-4b26-ac71-ef1bd54600d1");
     height: 725px;
     background-position: top; 
     background-repeat: no-repeat; 
@@ -273,7 +274,7 @@ export default {
     cursor: pointer;
   }
   .section-4 {
-    background: url("https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/3302180footer.png?alt=media&token=4475cc48-8b24-4e37-a5c8-5e17d8a332fa") no-repeat;
+    background: url("https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/3302180footer.png?alt=media&token=8ce84032-3de6-4da1-9166-9d92e20c5e7c") no-repeat;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -316,7 +317,5 @@ export default {
     .slide-margin {
       margin-top: 47rem;
     }
-    
   }
-  
 </style>
