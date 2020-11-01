@@ -6,7 +6,7 @@
     <div class="container mx-auto">
       <div class="text-done text-white text-center mt-32">
         <h2 class="text-2xl ">Регистрация прошла успешно</h2>
-        <p>Попробуйте отсканировать с помощью ProTag</p>
+        <p>Попробуйте отсканировать с помощью Protag</p>
         <img class="mx-auto mt-24 w-40" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/Untitled-22.png?alt=media&token=d9668634-df0d-4bae-a35f-87e7510beb95" alt="" srcset="">
       </div>
     </div>
