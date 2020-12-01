@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="grid-cols-1 mt-2">
+      <div class="grid-cols-1 mt-2 xl:mt-6">
         <form class="w-full">
           <div class="w-full text-left">
             <h4 class="block tracking-wide text-white ml-2 mb-2">Instagram например: protaguz Без @</h4>
@@ -39,7 +39,7 @@
           </div>
         </form>
       </div>
-      <div class="grid-cols-1 mt-2">
+      <div class="grid-cols-1 mt-2 xl:mt-6">
         <form class="w-full">
           <div class="w-full text-left">
             <h4 class="block tracking-wide text-white ml-2 mb-2">Telegram например: protaguz Без @</h4>
@@ -47,7 +47,7 @@
           </div>
         </form>
       </div>        
-      <div class="grid-cols-1 mt-2">
+      <div class="grid-cols-1 mt-2 xl:mt-6">
         <form class="w-full">
           <div class="w-full text-left">
             <h4 class="block tracking-wide text-white ml-2 mb-2">WhatsApp номер телефона например: +998976543210</h4>
@@ -55,7 +55,7 @@
           </div>
         </form>
       </div>
-      <div class="grid-cols-1 mt-2">
+      <div class="grid-cols-1 mt-2 xl:mt-6">
         <form class="w-full">
           <div class="w-full text-left">
             <h4 class="block tracking-wide text-white ml-2 mb-2">Номер телефона например: +998976543210</h4>
@@ -63,7 +63,7 @@
           </div>
         </form>
       </div>
-      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-6 text-white">Дальше</button>
+      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-6 xl:mt-16 mb-2 xl:mb-12 text-white">Дальше</button>
       <div class="pb-20 block w-12"></div>
     </div>
   </div>

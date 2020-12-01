@@ -2,11 +2,11 @@
   <div class="back-color">
     <div :style="{ backgroundColor: user.profile.back }" class="h-48 w-full token-color mx-auto">
       <div class="container">
-        <a href="/"><img class="w-12 ml-4 pt-4" src="https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/logonew.png?alt=media&token=cc63ca80-2a4f-409b-acd2-1782383d66fb" alt=""></a>
+        <a href="/" class="block w-12 ml-4 pt-4"><img class="" src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/logonew%20(2).png?alt=media&token=67af3567-ec52-4df8-85c9-ef4f63128d06" alt=""></a>
       </div>
     </div>
-    <div class="container member mx-auto px-5">
-        <div class="grid grid-cols-6 gap-2 shadow-2xl bg-white rounded-lg px-3 py-4" v-if="user.profile.name.length > 1">
+    <div class="container member mx-auto px-5 pb-20">
+        <div class="grid grid-cols-6 gap-2 shadow-2xl bg-white rounded-lg px-3 pt-4 pb-8" v-if="user.profile.name.length > 1">
           <div class="col-span-2 flex">
             <img class="object-cover img-mobile xl:h-32 lg:h-32 xl:w-32 lg:w-32 w-24 h-24 rounded-full bg-gray-500" :src="user.profile.photo" alt="">
           </div>
@@ -118,6 +118,9 @@ export default {
   }
   .payme {
     border: 4px solid #00D6D8;
+  }
+  .click {
+    background: #181927;
   }
   .snapchat {
     background: #dfdb10;

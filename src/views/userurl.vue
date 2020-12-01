@@ -69,8 +69,8 @@
           </div>
         </form>
       </div>
-      <button v-if="this.info.profile.tiktok.length < 3 && this.info.profile.payme.length < 3 && this.info.profile.facebook.length < 3" @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 mb-8 text-white">Дальше</button>
-      <button v-else @click.prevent="saveInfo" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 mb-8 text-white">Сохранить</button>
+      <button v-if="this.info.profile.tiktok.length < 3 && this.info.profile.payme.length < 3 && this.info.profile.facebook.length < 3" @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 xl:mt-10 xl:mb-12 mb-8 text-white">Дальше</button>
+      <button v-else @click.prevent="saveInfo" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 mb-8 text-white xl:mt-10 xl:mb-12">Сохранить</button>
       <div class="pb-20 block w-12"></div>
     </div>
   </div>
@@ -109,6 +109,7 @@ export default {
         payme: this.payme,
         snapchat: this.snapchat,
         youtube: this.youtube,
+        click: this.click
       }
       await this.$store.dispatch('updateUrl', info)
     },
