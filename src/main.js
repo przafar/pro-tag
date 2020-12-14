@@ -6,6 +6,10 @@ import './assets/css/tailwind.css'
 import VModal from 'vue-js-modal'
 import Vuelidate from 'vuelidate'
 import ScrollAnimation from './directives/scrollanimation.js'
+import VueSplide from '@splidejs/vue-splide';
+
+Vue.use( VueSplide );
+
 
 import firebase from 'firebase/app'
 import 'firebase/auth'

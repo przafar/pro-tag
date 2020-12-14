@@ -1,7 +1,7 @@
 <template>
   <div class="back"> 
     <div class="contaner mx-auto">
-      <div class="delivery bg-gray-200 text-gray-900">
+      <div class="delivery bg-gray-200 h-screen text-gray-900">
         <div class="navbar">
           <Header/>
         </div>

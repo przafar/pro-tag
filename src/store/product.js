@@ -19,6 +19,24 @@ export default {
         throw e
       } 
     },
+    async fetchProduct({commit}) {
+      try {
+        const info = (await firebase.database().ref(`/products/color`).once('value')).val()
+        return Object.keys(info).map(key => ({...info[key], id: key}))
+      } catch (e) {
+        commit('setError', e)
+        throw e
+      } 
+    },
+    async fetchLimited({commit}) {
+      try {
+        const info = (await firebase.database().ref(`/products/limit`).once('value')).val()
+        return Object.keys(info).map(key => ({...info[key], id: key}))
+      } catch (e) {
+        commit('setError', e)
+        throw e
+      } 
+    },
     async updateAmount({commit}, {amountSimple, amountLimited, amountCustom}) {
       try {
         const info = await firebase.database().ref(`/products`).update({amountSimple, amountLimited, amountCustom})

@@ -109,8 +109,8 @@
         </div>
         <div class="grid grid-cols-5 gap-4 px-4 xl:px-0 lg:px-0">
           <div v-scrollanimation class="xl:col-start-2 xl:col-end-3 lg:col-start-2 lg:col-end-3 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
-            <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/download%20(1).png?alt=media&token=30518b98-87c9-47b6-be1a-750576367bbd" alt="">
+            <div class="tag-photo text-center text-white">
+              <SliderProduct />  
             </div>
             <div class="tag-price text-center pt-4">
               <h4 class="text-blue-600 font-semibold">{{ product.amountSimple }} сум</h4>
@@ -118,20 +118,20 @@
             </div>
             <div class="tag-info text-center">
               <div class="flex">
+                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-blue-500"></li>
                 <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-indigo-500"></li>
                 <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-red-500"></li>
                 <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-yellow-300"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-green-400"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-blue-400"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-pink-400"></li>  
+                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-pink-400"></li>
+                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-black"></li>
               </div><hr>
               <p class="py-3">Выберите цвет.</p> <hr>
               <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
             </div>
           </div>    
           <div v-scrollanimation class="xl:col-start-3 xl:col-end-4 lg:col-start-3 lg:col-end-4 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
-            <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/capitan.png?alt=media&token=9621f225-a691-4c46-9767-b10b3a148086" alt="">
+            <div class="tag-photo text-center text-white">
+              <SliderLimited />
             </div>
             <div class="tag-price text-center pt-4">
               <h4 class="text-blue-600 font-semibold">{{ product.amountLimited }} сум</h4>
@@ -161,8 +161,10 @@
         </div>
       </div>
     </div>
+    <div>
+    </div>
     <a @click="scrollTop" v-show="visible" class="bottom-right mb-12 text-white scrool-bg w-12 h-12 rounded-full text-center pt-3">
-        <i class="fas fa-angle-up"></i>
+      <i class="fas fa-angle-up"></i>
     </a>
     <Footer/>
   </div>
@@ -172,9 +174,10 @@
 import Header from '../components/Header.vue'
 import Slider from '../components/Slider.vue'
 import Footer from '../components/Footer.vue'
+import SliderLimited from '../components/SliderLimited'
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
-
+import SliderProduct from '../components/SliderProduct';
 export default {
   name: 'Home',
   data: () => ({
@@ -182,7 +185,7 @@ export default {
     animate: true,
     product: [],
     isLoading: true,
-    fullPage: false,
+    fullPage: false
   }),
   async mounted() {
     this.product = await this.$store.dispatch('fetchAmount')
@@ -192,6 +195,8 @@ export default {
     setTimeout(function () {
       return this.phone = true
     }, 1000)
+    console.log('Current Swiper instance object', this.swiper)
+      this.swiper.slideTo(3, 1000, false)
   },
   methods: {
     scrollTop: function () {
@@ -209,14 +214,22 @@ export default {
       this.animate=false;
    }
   },
+  computed: {
+    swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
+  },
   components: {
     Header,
     Slider,
     Footer,
-    Loading
-  }
+    Loading,
+    SliderProduct,
+    SliderLimited
+  },
 }
 </script>
+
 <style scoped>
   .home {
     background: url("https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/3302180.jpg?alt=media&token=17521e35-40ed-4b26-ac71-ef1bd54600d1");

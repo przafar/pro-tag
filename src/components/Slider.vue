@@ -18,19 +18,19 @@ export default {
           {
             html: 'slide1',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/photo_2019-10-19_02-54-33.jpg?alt=media&token=8eea04fe-b429-4034-b438-d83ed1178741'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/youssef-sarhan-tze1kKj7Lgg-unsplash.jpg?alt=media&token=d718b6c0-9561-43bd-a1f3-8745df48fb39'
             }
           },
           {
             html: 'slide2',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=648380f7-e203-4135-9600-69ed0fa0d1dc'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/photo_2019-10-19_02-54-33.jpg?alt=media&token=544be21b-035a-402a-88ed-9caed254aa64'
             }
           },
           {
             html: 'slide3',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/vue-ptag.appspot.com/o/youssef-sarhan-tze1kKj7Lgg-unsplash.jpg?alt=media&token=2b6193b2-94d0-401e-b150-a4eb01bd2dca'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=648380f7-e203-4135-9600-69ed0fa0d1dc'
             }
           }
         ],
