@@ -9,7 +9,6 @@ import UserInfo from '../views/userInfo.vue'
 import Userurl from '../views/userurl.vue'
 import Back from '../views/Back.vue'
 import Done from '../views/Done.vue'
-import Admin from '../views/Admin.vue'
 import Phones from '../views/Phones.vue'
 import Delivery from '../views/Delivery.vue'
 import Contacts from '../views/Contacts.vue'
@@ -48,12 +47,6 @@ const router = new VueRouter({
       name: "User",
       component: User,
       meta: {layout: 'User', auth: true}
-    },
-    {
-      path: '/Admin',
-      name: "Admin",
-      component: Admin,
-      meta: {layout: 'Admin', auth: true}
     },
     {
       path: '/Edit',
