@@ -108,11 +108,11 @@
           <p>Выберите подходящие условия для вашей жизни или бизнеса и используйте приложение PROTAG с максимальной эффективностью!</p>
         </div>
         <div class="grid grid-cols-5 gap-4 px-4 xl:px-0 lg:px-0">
-          <div v-scrollanimation class="xl:col-start-2 xl:col-end-3 lg:col-start-2 lg:col-end-3 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
+          <div v-scrollanimation class="xl:col-start-2 xl:col-end-3 lg:col-start-2 lg:col-end-3 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6  mb-4 xl:mb-12 lg:mb-12">
             <div class="tag-photo text-center text-white">
               <SliderProduct />  
             </div>
-            <div class="tag-price text-center pt-4">
+            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
               <h4 class="text-blue-600 font-semibold">{{ product.amountSimple }} сум</h4>
               <p class="px-4 xl:px-0 lg:px-0">Цветное издание.</p>
             </div>
@@ -129,11 +129,11 @@
               <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
             </div>
           </div>    
-          <div v-scrollanimation class="xl:col-start-3 xl:col-end-4 lg:col-start-3 lg:col-end-4 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4  mb-4 xl:mb-12 lg:mb-12">
+          <div v-scrollanimation class="xl:col-start-3 xl:col-end-4 lg:col-start-3 lg:col-end-4 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6  mb-4 xl:mb-12 lg:mb-12">
             <div class="tag-photo text-center text-white">
               <SliderLimited />
             </div>
-            <div class="tag-price text-center pt-4">
+            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
               <h4 class="text-blue-600 font-semibold">{{ product.amountLimited }} сум</h4>
               <p class="px-4 xl:px-0 lg:px-0">Limited Edition:</p>
             </div>
@@ -143,11 +143,11 @@
               <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
             </div>
           </div>
-          <div v-scrollanimation class="xl:col-start-4 xl:col-end-5 lg:col-start-4 lg:col-end-5 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-4 mb-8 xl:mb-12 lg:mb-12">
+          <div v-scrollanimation class="xl:col-start-4 xl:col-end-5 lg:col-start-4 lg:col-end-5 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6 mb-8 xl:mb-12 lg:mb-12">
             <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
               <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/custom-logo.png?alt=media&token=37c5d606-853e-44eb-98dd-589832104c09" alt="">
             </div>
-            <div class="tag-price text-center pt-4">
+            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
               <h4 class="text-blue-600 font-semibold">{{ product.amountCustom }} сум</h4>
               <p class="px-4 xl:px-0 lg:px-0">Ваш собственный логотип!</p>
             </div>

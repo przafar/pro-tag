@@ -15,7 +15,6 @@ import Contacts from '../views/Contacts.vue'
 import NotFound from '../views/NotFound.vue'
 
 
-
 Vue.use(VueRouter)
 
 
