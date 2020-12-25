@@ -4,6 +4,7 @@ import firebase from 'firebase/app'
 import Home from '../views/Home.vue'
 import User from '../views/user.vue'
 import Edit from '../views/Edit.vue'
+import Admin from '../views/Admin.vue'
 import Member from '../views/Member.vue'
 import UserInfo from '../views/userInfo.vue'
 import Userurl from '../views/userurl.vue'
@@ -46,6 +47,12 @@ const router = new VueRouter({
       name: "User",
       component: User,
       meta: {layout: 'User', auth: true}
+    },
+    {
+      path: '/Admin',
+      name: "Admin",
+      component: Admin,
+      meta: {layout: 'Admin', auth: true}
     },
     {
       path: '/Edit',

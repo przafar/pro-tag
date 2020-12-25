@@ -19,7 +19,7 @@ import ModalLogin from '../components/ModalLogin.vue'
   export default {
     data: () => ({
       isOpen: false,
-      logo: 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/Untitled-1.png?alt=media&token=d747c434-e7bf-4031-ad2a-0991c861a1f6'
+      logo: 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/logonew-22.svg?alt=media&token=d83b61ed-66fc-49ec-aae9-398ab48f3e08'
     }),
     components: {
       ModalLogin
