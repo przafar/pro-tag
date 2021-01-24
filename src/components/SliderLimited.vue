@@ -20,7 +20,9 @@ import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
           type: 'loop',
           width: 800,
           pagination: false,
-          arrows: false
+          arrows: false,
+          autoplay: true,
+          pauseOnHover: false,
         },
       };
     },

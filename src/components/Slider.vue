@@ -18,19 +18,19 @@ export default {
           {
             html: 'slide1',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/youssef-sarhan-tze1kKj7Lgg-unsplash.jpg?alt=media&token=d718b6c0-9561-43bd-a1f3-8745df48fb39'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/slide3.jpg?alt=media&token=980be932-37f1-4eae-adb8-3f098e29bd62'
             }
           },
           {
             html: 'slide2',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/photo_2019-10-19_02-54-33.jpg?alt=media&token=544be21b-035a-402a-88ed-9caed254aa64'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/slide2.jpg?alt=media&token=827bc878-b595-4665-b716-9f88ec0b186b'
             }
           },
           {
             html: 'slide3',
             style: {
-              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/arnel-hasanovic-4oWSXdeAS2g-unsplash%20medium.jpg?alt=media&token=648380f7-e203-4135-9600-69ed0fa0d1dc'
+              'background': 'https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/arnel1.jpg?alt=media&token=7a7e77e5-5e2d-4ae0-a4d6-0873978667bc'
             }
           }
         ],

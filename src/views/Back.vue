@@ -7,7 +7,7 @@
       <div class="grid-cols-1 text-white text-left text-2xl pb-8">
         <h2>Выберите обложку</h2>
       </div>
-      <div :style="{ backgroundColor: this.color }" class="grid grid-cols-6 gap-4 w-full h-40 sm:h-32 rounded-lg back-mobile">
+      <div :style="{ background: this.color }" class="grid grid-cols-6 gap-4 w-full h-40 sm:h-32 rounded-lg back-mobile">
 
       </div>
       <div class="px-2">
@@ -36,8 +36,10 @@
           </div>
         </div>
       </div>
-      <div class="flex pl-1 mt-6 lg:ml-20 xl:ml-20 xl:mt-10 lg:mt-10">
-        <div @click="updateBack(variant.variantColor)" v-for="variant in variants" :key="variant.variantId" :style="{ backgroundColor: variant.variantColor}" class="w-8 h-8 rounded-full ml-1 mx-auto"></div>
+      <div class="flex flex-wrap px-1 mt-2 lg:ml-20 xl:ml-20 xl:mt-10 lg:mt-10">
+        <div  v-for="variant in variants" :key="variant.variantId"  class="mx-auto">
+          <div @click="updateBack(variant.variantColor)" :style="{ backgroundColor: variant.variantColor}" class="w-8 h-8 rounded-full mt-4 mx-1"></div>
+        </div>
       </div>
       <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-6 mb-8 xl:mt-16 lg:mt-16 text-white">Сохранить</button>
     </div>
@@ -55,33 +57,63 @@ export default {
     selectedFile: null,
     variants: [
       {
-        variantId: 2234,
+        variantId: 1,
+        variantColor: "#1e1f26",
+
+      },
+      {
+        variantId: 2,
         variantColor: "#718096"
       },
       {
-        variantId: 2235,
-        variantColor: "#e53e3e"
+        variantId: 3,
+        variantColor: "#cc2a36"
       },
       {
-        variantId: 2236,
+        variantId: 4,
+        variantColor: "#ee4035"
+      },
+      {
+        variantId: 4,
+        variantColor: "#2e003e"
+      },
+      {
+        variantId: 5,
         variantColor: "#8a2be2"
       },
       {
-        variantId: 2237,
-        variantColor: "#ecc94b"
+        variantId: 6,
+        variantColor: "#f6cd61"
       },
       {
-        variantId: 2238,
+        variantId: 6,
+        variantColor: "#fdf498"
+      },
+      {
+        variantId: 7,
+        variantColor: "#ff0084"
+      },
+      {
+        variantId: 7,
+        variantColor: "#ff8b94"
+      },
+      {
+        variantId: 8,
+        variantColor: "#009688"
+      },
+      {
+        variantId: 9,
         variantColor: "#48bb78"
       },
       {
-        variantId: 2239,
-        variantColor: "#7fffd4"
+        variantId: 10,
+        variantColor: "#3b7dd8"
       },
       {
-        variantId: 2240,
-        variantColor: "#4299e1"
+        variantId: 11,
+        variantColor: "#84c1ff "
       },
+      
     ],
     color: '#718096'
 
@@ -94,8 +126,6 @@ export default {
     } else {
       this.color
     }
-
-    
   },
   methods: {
     backRoute() {

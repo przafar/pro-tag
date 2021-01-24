@@ -49,21 +49,21 @@ export default {
         throw e
       }
     },
-    async updateInfo({dispatch, commit}, {instagram, telegram, whatsapp, phone,}) {
+    async updateInfo({dispatch, commit}, {instagram, telegram, whatsapp, phone, tiktok}) {
       try {
         const uid = await dispatch('getUid')
-        const info = await firebase.database().ref(`/users/${uid}/profile`).update({instagram, telegram, whatsapp, phone,})
-        return {whatsapp, phone, instagram, telegram, id: info.key}
+        const info = await firebase.database().ref(`/users/${uid}/profile`).update({instagram, telegram, whatsapp, phone, tiktok})
+        return {whatsapp, phone, instagram, tiktok, telegram, id: info.key}
       } catch (e) {
         commit('setError', e)
         throw e
       } 
     },
-    async updateUrl({dispatch, commit}, {tiktok, facebook, payme, snapchat, youtube}) {
+    async updateUrl({dispatch, commit}, {facebook, payme, snapchat, youtube}) {
       try {
         const uid = await dispatch('getUid')
-        const info = await firebase.database().ref(`/users/${uid}/profile`).update({tiktok, facebook, payme, snapchat, youtube})
-        return {payme, snapchat, youtube, tiktok, facebook,  id: info.key}
+        const info = await firebase.database().ref(`/users/${uid}/profile`).update({facebook, payme, snapchat, youtube})
+        return {payme, snapchat, youtube, facebook,  id: info.key}
       } catch (e) {
         commit('setError', e)
         throw e

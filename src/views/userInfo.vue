@@ -46,6 +46,14 @@
             <input v-model="telegram" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Без @">
           </div>
         </form>
+      </div>
+      <div class="grid-cols-1 mt-2">
+        <form class="w-full">
+          <div class="w-full text-left">
+            <h4 class="block tracking-wide text-white ml-2 mb-2">TikTok например: protaguz</h4>
+            <input v-model="tiktok" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="protaguz">
+          </div>
+        </form>
       </div>        
       <div class="grid-cols-1 mt-2 xl:mt-6">
         <form class="w-full">
@@ -79,6 +87,7 @@ export default {
     instagram: '',
     telegram: '',
     whatsapp: '',
+    tiktok: '',
     phone: '',
     uid: '',
     selectedFile: null,
@@ -90,6 +99,7 @@ export default {
     this.instagram = this.info.profile.instagram
     this.telegram = this.info.profile.telegram
     this.whatsapp = this.info.profile.whatsapp
+    this.tiktok = this.info.profile.tiktok
     this.phone = this.info.profile.phone  
   },
   methods: {
@@ -102,6 +112,7 @@ export default {
         telegram: this.telegram,
         whatsapp: this.whatsapp,
         phone: this.phone,
+        tiktok: this.tiktok
       }
       await this.$store.dispatch('updateInfo', info)
     },
