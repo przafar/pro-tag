@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="menu">
         <div ref="sideNav" class="bm-menu ml-4">
             <nav class="bm-item-list">
                 <slot></slot>
@@ -199,74 +199,77 @@
 </script>
 
 <style>
+  .menu {
+    height: 100%;
+  }
+  .bm-burger-button {
+    position: relative;
+    width: 34px;
+    height: 28px;
+    margin-top: 9px;
+    margin-right: -35px;
+    cursor: pointer;
+  }
+  .bm-burger-button.hidden {
+    display: none;
+  }
+  .bm-burger-bars {
+    background-color: #181818;
+  }
+  .line-style {
+    position: absolute;
+    height: 20%;
+    left: 0;
+    right: 0;
+  }
+  .cross-style {
+    position: absolute;
+    top: 12px;
+    right: 2px;
+    cursor: pointer;
+  }
+  .bm-cross {
+    background: #ffffff;
+    width: 20px;
+  }
+  .bm-cross-button {
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+  }
+  .bm-cross-button.hidden {
+    display: none;
+  }
+  .bm-menu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #181818; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+  }
+  .bm-item-list {
+    color: #b8b7ad;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+  .bm-item-list > * {
+    display: flex;
+    text-decoration: none;
+    padding: 0.7em;
+  }
+  .bm-item-list > * > span {
+    margin-left: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  @media screen and (min-width: 310px) and (max-width: 640px) {
     .bm-burger-button {
-      position: relative;
-      width: 34px;
-      height: 28px;
-      margin-top: 9px;
       margin-right: -35px;
-      cursor: pointer;
     }
-    .bm-burger-button.hidden {
-      display: none;
-    }
-    .bm-burger-bars {
-      background-color: #181818;
-    }
-    .line-style {
-      position: absolute;
-      height: 20%;
-      left: 0;
-      right: 0;
-    }
-    .cross-style {
-      position: absolute;
-      top: 12px;
-      right: 2px;
-      cursor: pointer;
-    }
-    .bm-cross {
-      background: #ffffff;
-      width: 20px;
-    }
-    .bm-cross-button {
-      height: 40px;
-      width: 40px;
-      margin-top: 15px;
-    }
-    .bm-cross-button.hidden {
-      display: none;
-    }
-    .bm-menu {
-      height: 100%; /* 100% Full-height */
-      width: 0; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 1000; /* Stay on top */
-      top: 0;
-      left: 0;
-      background-color: #181818; /* Black*/
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; /* Place content 60px from the top */
-      transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
-    }
-    .bm-item-list {
-      color: #b8b7ad;
-      margin-left: 5%;
-      font-size: 20px;
-    }
-    .bm-item-list > * {
-      display: flex;
-      text-decoration: none;
-      padding: 0.7em;
-    }
-    .bm-item-list > * > span {
-      margin-left: 10px;
-      font-weight: 500;
-      color: white;
-    }
-    @media screen and (min-width: 310px) and (max-width: 640px) {
-      .bm-burger-button {
-        margin-right: -35px;
-      }
-    }
+  }
 </style>

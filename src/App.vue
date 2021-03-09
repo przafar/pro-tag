@@ -9,10 +9,10 @@
 </script>
 <style>
   @font-face {
-    font-family: 'MADE Evolve Sans Medium';
-    src: local('MADE Evolve Sans Medium'), url('./assets/fonts/Made.otf') format('truetype');
+    font-family: 'PT-Root-UI_Medium';
+    src: local('PT-Root-UI_Medium'), url('./assets/fonts/PT-Root-UI_Medium.ttf') format('truetype');
   }
   .app {
-    font-family: 'MADE Evolve Sans Medium';
+    font-family: 'PT-Root-UI_Medium';
   }
 </style>

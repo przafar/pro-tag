@@ -7,7 +7,7 @@
     </div>
     <div class="header bg-white">
       <header class="py-2 mx-auto container">
-        <div class="flex items-center justify-between py-1 px-4 lg:px-0 md:px-0 xl:px-0">
+        <div class="flex items-center justify-between py-1 px-4 xl:px-0 lg:px-0 md:px-4">
           <a href="/" class="pl-0">
           <svg width="42" height="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
  

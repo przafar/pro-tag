@@ -80,13 +80,13 @@
             </a>
           </div>
           <div v-if="user.profile.mail.length > 3" class="col-span-8 mx-auto">
-            <a :href="user.profile.mail" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 mail text-white">
+            <a :href="'mailto:' + user.profile.mail" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 mail text-white">
               <i class="fas fa-envelope pt-2"></i>
               <p class="mx-auto">Email</p>
             </a>
           </div>
           <div v-if="user.profile.website.length > 3" class="col-span-8 mx-auto mb-12">
-            <a :href="user.profile.website" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 website text-white">
+            <a :href="'https://' + user.profile.website" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 website text-white">
               <i class="fas fa-compass pt-2"></i>
               <p class="mx-auto">Website</p>
             </a>
@@ -187,10 +187,9 @@ export default {
     width: 230px;
   }
   .website {
-background: #00B4DB;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 12px;
     width: 230px;
   }

@@ -16,7 +16,7 @@
             <h5 class="mt-12 font-semibold text-xl">{{ slide.option }}</h5>
             <p class="text-lg">{{ slide.cost }} сум</p>
           </router-link>
-          <button @click="submitHandler(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 text-lg
+          <button @click="submitHandler(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 font-semibold text-base
             text-black duration-300 hover:bg-black hover:text-white">Добавить в корзину</button>
         </div>
       </div>
@@ -34,7 +34,7 @@
             <h5 class="mt-12 font-semibold text-xl">{{ slide.option }}</h5>
             <p class="text-lg">{{ slide.cost }} сум</p>
           </router-link>
-          <button @click="submitHandler(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 text-lg
+          <button @click="submitHandler(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 font-semibold text-base
             text-black duration-300 hover:bg-black hover:text-white">Добавить в корзину</button>
         </div>
       </div>

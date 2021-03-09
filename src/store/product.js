@@ -39,11 +39,6 @@ export default {
     removeFromCart(state, item) {
       state.cart.splice(item, 1)
       this.commit('saveData')
-      this.$toasted.show("Добавлено!", { 
-        theme: "outline", 
-        position: "top-right", 
-        duration : 2000
-      });
     },
     setInfo(state, info) {
       state.info = info

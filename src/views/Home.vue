@@ -10,7 +10,7 @@
                             class="mx-auto mt-48"
         />
       </div>
-      <div class="container mx-0 lg:mx-auto md:mx-auto xl:mx-auto px-0">
+      <div class="container mx-0 lg:mx-auto md:mx-auto xl:mx-auto  px-4 xl:px-0 lg:px-0 md:px-4">
         <div class="header">
           <div class="text-center text-white lg:mt-4 xl:mt-0 py-48 md:py-64 xl:py-64 lg:py-64 ">
             <h1 class="xl:text-4xl lg:text-4xl text-3xl font-semibold sm:text-2xl pb-0 md:pb-24 lg:pb-24 xl:pb-24">Поделитесь своими социальными сетями<br/>и бизнесом одним касанием</h1>
@@ -28,7 +28,7 @@
                 <h5 class="mt-12 font-semibold text-xl">{{ slide.option }}</h5>
                 <p class="text-lg">{{ slide.cost }} сум</p>
               </router-link>
-              <button @click="addProduct(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 text-lg
+              <button @click="addProduct(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 font-semibold text-base
                text-black duration-300 hover:bg-black hover:text-white">Добавить в корзину</button>
             </div>
           </div>  

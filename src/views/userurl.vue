@@ -64,7 +64,7 @@
       <div class="grid-cols-1 mt-2">
         <form class="w-full">
           <div class="w-full text-left">
-            <h4 class="block tracking-wide text-white ml-2 mb-2">Website например: https://www.protag.uz...</h4>
+            <h4 class="block tracking-wide text-white ml-2 mb-2">Website например: protag.uz...</h4>
             <input v-model="website" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Website URL">
           </div>
         </form>

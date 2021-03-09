@@ -48,7 +48,7 @@
               <h4 class="text-xl">Итог</h4>
               <h4 class="justify-end text-xl">{{ total }} Сум</h4>
             </div>
-            <button class="text-center bg-black w-full py-4 text-white mt-8 text-lg"><i class="fas fa-lock pr-4"></i>Проверить</button>
+            <button @click="check" class="text-center bg-black w-full py-4 text-white mt-8 text-lg"><i class="fas fa-lock pr-4"></i>Проверить</button>
           </div>
         </div>
       </div>
@@ -70,6 +70,15 @@ export default {
   mounted() {
     for (let i = 1; i <= 10; i++) {
       this.quantityArray.push(i);
+    }
+  },
+  methods: {
+    check() {
+      this.$toasted.show("Временно не работает!", { 
+        theme: "outline", 
+        position: "top-right", 
+        duration : 2000
+      });
     }
   },
   computed: {
