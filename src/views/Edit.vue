@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full back-color h-screen">
+  <div class="w-full back-color">
     <div class="container mx-auto text-center pt-10 px-6">
       <div class="grid-cols-1 text-left pb-8">
         <a @click.prevent="backRoute" class="text-white text-2xl"><i class="fas fa-arrow-left"></i></a>
@@ -38,7 +38,7 @@
         <div class="container mx-auto mt-2">
           <div class="grid grid-cols-6 gap-2 text-white text-left">
             <div class="mt-10 col-span-4">
-              <h3 class="font-semibold">Изменить фото и имя:</h3>
+              <h3 class="">Изменить фото и имя:</h3>
             </div>
             <div class="col-span-2 place-self-end">
               <router-link to="/user" tag="a">
@@ -50,7 +50,7 @@
         <div class="container mx-auto">
           <div class="grid grid-cols-6 gap-2 text-white text-left">
             <div class="mt-10 col-span-4">
-              <h3 class="font-semibold">Изменить URL:</h3>
+              <h3 class="">Изменить URL:</h3>
             </div>
             <div class="col-span-2 place-self-end">
               <router-link to="/userInfo" tag="a">
@@ -59,10 +59,10 @@
             </div>
           </div>
         </div>
-        <div class="container mx-auto ">
+        <div class="container mx-auto pb-48">
           <div class="grid grid-cols-6 gap-2 text-white text-left">
             <div class="mt-10 col-span-4">
-              <h3 class="font-semibold">Изменить фон:</h3>
+              <h3 class="">Изменить фон:</h3>
             </div>
             <div class="col-span-2 place-self-end">
               <router-link to="/back" tag="a">
@@ -71,6 +71,7 @@
             </div>
           </div>
         </div>
+        
       </div>
       <div v-else>
         <div class="container mx-auto mt-12">
@@ -119,9 +120,6 @@ export default {
       }
       await this.$store.dispatch('updateInfo', info)
     },
-    
-
-    
   },
   computed: {
     info() {
@@ -130,14 +128,12 @@ export default {
   },  
   components: {
 	}
-  
 }
 </script>
 <style scoped>
   .back-color {
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #111111 74%);
-    min-height: 100%;
   }
   .logot {
     padding-top: 1px;
@@ -146,7 +142,6 @@ export default {
     .back-color {
       background-color: #000000;
       background-image: linear-gradient(315deg, #000000 0%, #111111 74%);
-      height: 100%;
     }
     .logot {
       width: 30px;

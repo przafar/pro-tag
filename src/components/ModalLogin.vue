@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="user float-right">
-      <a class="text-white xl:text-white lg:text-white text-2xl" @click="show"><i class="fas fa-user"></i></a>  
+    <div class="mr-12 md:mr-16 lg:mr-16 xl:mr-16">
+      <a class="text-black flex mt-2" @click="show"><i class="fas fa-user-circle text-3xl mt-0 mr-2 "></i><p class="text-xl hidden md:block lg:block xl:block">Войти</p></a>  
     </div>
     <modal  :width="600"
             :height="450"
@@ -21,21 +21,23 @@
       <div class="w-full">
         <form @submit.prevent="submitHandler" class="bg-white px-8 pt-6 pb-8 mb-4">
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-              Имя пользователя
+            <label class="block text-gray-700 text-lg mb-2" for="username">
+              Логин
             </label>
-            <input v-model="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Имя пользователя">
+            <input v-model="email" class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="protag0000@tag.com">
             <p v-if="$v.email.$dirty && !$v.email.required" class="text-red-500 text-xs italic">Пожалуйста, выберите email</p>
           </div>
           <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <label class="block text-gray-700 text-lg mb-2" for="password">
               Пароль
             </label>
-            <input v-model="password" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" placeholder="********">
+            <input v-model="password" type="password" class="shadow appearance-none border w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" placeholder="*******">
             <p v-if="$v.email.$dirty && !$v.email.required" class="text-red-500 text-xs italic">Пожалуйста, выберите пароль</p>
+            <p v-show="notFound" class="text-red-500 text-xs italic">Пользователь не существует.</p>
+
           </div>
           <div class="flex items-center justify-between">
-            <button type="submit" class="button-modal text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button type="submit" class="button-modal text-white text-lg py-2 px-6 focus:outline-none focus:shadow-outline">
               Войти
             </button>
             <a class="inline-block align-baseline font-bold text-sm forget-modal" href="https://t.me/protag1">
@@ -58,7 +60,8 @@ export default {
   props: ['logo'],
   data: () => ({
     email: '',
-    password: ''
+    password: '',
+    notFound: false
   }),
   validations: {
     email: {
@@ -73,6 +76,7 @@ export default {
   methods: {
     show () {
       this.$modal.show('modal');
+      
     },
     hide () {
       this.$modal.hide('modal');
@@ -90,9 +94,9 @@ export default {
       try {
         await this.$store.dispatch('login', formData)
         this.$router.push('/Edit')
-        console.log(formData)
       } catch (e) {
         console.log(e)
+        this.notFound = true
       }
       
     }
@@ -103,21 +107,19 @@ export default {
 }
 </script>
 <style scoped>
-  
-  
   .logo img {
     width: 50px;
   }
   .button-modal {
-    background: #009EFA;
+    background: #181818;
   }
   .forget-modal {
-    color: #009EFA;
+    color: #181818;
   }
   .button-modal:hover {
-    background: #845EC2;
+    background: #000000;
   }
   .forget-modal:hover {
-    color: #845EC2;
+    color: #000000;
   }
 </style>

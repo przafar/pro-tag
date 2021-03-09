@@ -10,8 +10,12 @@ import Userurl from '../views/userurl.vue'
 import Back from '../views/Back.vue'
 import Done from '../views/Done.vue'
 import Phones from '../views/Phones.vue'
-import Delivery from '../views/Delivery.vue'
+import Return from '../views/Return.vue'
+import Help from '../views/Help.vue'
 import Contacts from '../views/Contacts.vue'
+import Add from '../views/Add.vue'
+import Order from '../views/Order.vue'
+import All from '../views/All.vue'
 import NotFound from '../views/NotFound.vue'
 
 
@@ -46,6 +50,18 @@ const router = new VueRouter({
       name: "User",
       component: User,
       meta: {layout: 'User', auth: true}
+    },
+    {
+      path: '/Order',
+      name: "Order",
+      component: Order,
+      meta: {layout: 'Order', auth: false}
+    },
+    {
+      path: '/All',
+      name: "All",
+      component: All,
+      meta: {layout: 'All', auth: false}
     },
     {
       path: '/Edit',
@@ -83,9 +99,19 @@ const router = new VueRouter({
       component: Phones
     },
     {
-      path: '/Delivery',
-      name: "Delivery",
-      component: Delivery
+      path: '/Help',
+      name: "Help",
+      component: Help
+    },
+    {
+      path: '/Return',
+      name: "Return",
+      component: Return
+    },
+    {
+      path: '/Add/:id',
+      name: "Add",
+      component: Add
     },
     {
       path: '/Contacts',

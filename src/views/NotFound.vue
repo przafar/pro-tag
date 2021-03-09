@@ -1,11 +1,11 @@
 <template>
   <div class="back"> 
     <div class="contaner mx-auto">
-      <div class="delivery bg-gray-200 h-screen text-gray-900">
+      <div class="delivery h-screen text-gray-900">
         <div class="navbar">
           <Header/>
         </div>
-        <div class="grid-cols-2 container mx-auto text-center mt-32 pb-64">
+        <div class="grid-cols-2 container mx-auto text-center pt-40 pb-64">
           <h2 class="text-5xl">Страница не найдена</h2>
 
           <h2 class="text-5xl mt-24">404</h2>
@@ -27,18 +27,16 @@ export default {
 }
 </script>
 <style scoped>
-  .navbar {
-    background: #667db6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .back {
+    background: #fafafa;
   }
   .home {
-    background: #0082C8;
+    background: #181818;
     transition: 0.8s linear;
 
   }
   .home:hover {
-    background: #845EC2;
+    background: #292828;
     transition: 10ms;
 
   }

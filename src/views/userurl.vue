@@ -61,8 +61,16 @@
           </div>
         </form>
       </div>
-      <button v-if="this.info.profile.back < 3" @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 xl:mt-10 xl:mb-12 mb-8 text-white">Дальше</button>
-      <button v-else @click.prevent="saveInfo" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 mb-8 text-white xl:mt-10 xl:mb-12">Сохранить</button>
+      <div class="grid-cols-1 mt-2">
+        <form class="w-full">
+          <div class="w-full text-left">
+            <h4 class="block tracking-wide text-white ml-2 mb-2">Website например: https://www.protag.uz...</h4>
+            <input v-model="website" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Website URL">
+          </div>
+        </form>
+      </div>
+      <button v-if="this.info.profile.back < 3" @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 h-12 w-48 rounded-full mt-4 xl:mt-10 xl:mb-12 mb-8 text-white">Дальше</button>
+      <button v-else @click.prevent="saveInfo" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 h-12 w-48 rounded-full mt-4 mb-8 text-white xl:mt-10 xl:mb-12">Сохранить</button>
       <div class="pb-20 block w-12"></div>
     </div>
   </div>
@@ -78,6 +86,7 @@ export default {
     youtube: '',
     snapchat: '',
     uid: '',
+    website: '',
     selectedFile: null,
     back: ''
   }),
@@ -89,7 +98,7 @@ export default {
     this.snapchat = this.info.profile.snapchat
     this.youtube = this.info.profile.youtube
     this.back = this.info.profile.back
-
+    this.website = this.info.profile.website
   },
   methods: {
     backRoute() {
@@ -101,6 +110,7 @@ export default {
         payme: this.payme,
         snapchat: this.snapchat,
         youtube: this.youtube,
+        website: this.website
       }
       await this.$store.dispatch('updateUrl', info)
     },

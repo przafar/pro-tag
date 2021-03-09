@@ -71,7 +71,15 @@
           </div>
         </form>
       </div>
-      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-6 xl:mt-16 mb-2 xl:mb-12 text-white">Дальше</button>
+      <div class="grid-cols-1 mt-2 xl:mt-6">
+        <form class="w-full">
+          <div class="w-full text-left">
+            <h4 class="block tracking-wide text-white ml-2 mb-2">Email например: protag@tag.com</h4>
+            <input v-model="mail" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="protag@tag.com">
+          </div>
+        </form>
+      </div>
+      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 h-12 w-48 rounded-full mt-6 xl:mt-16 mb-2 xl:mb-12 text-white">Дальше</button>
       <div class="pb-20 block w-12"></div>
     </div>
   </div>
@@ -90,8 +98,8 @@ export default {
     tiktok: '',
     phone: '',
     uid: '',
+    mail: '',
     selectedFile: null,
-
   }),
   async mounted() {
     this.info = await this.$store.dispatch('fetchInfo');
@@ -100,7 +108,9 @@ export default {
     this.telegram = this.info.profile.telegram
     this.whatsapp = this.info.profile.whatsapp
     this.tiktok = this.info.profile.tiktok
-    this.phone = this.info.profile.phone  
+    this.phone = this.info.profile.phone
+    this.mail = this.info.profile.mail  
+
   },
   methods: {
     backRoute() {
@@ -112,7 +122,8 @@ export default {
         telegram: this.telegram,
         whatsapp: this.whatsapp,
         phone: this.phone,
-        tiktok: this.tiktok
+        tiktok: this.tiktok,
+        mail: this.mail
       }
       await this.$store.dispatch('updateInfo', info)
     },

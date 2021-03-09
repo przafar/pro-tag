@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <router-view/>
   </div>
 </template>
@@ -7,5 +7,12 @@
   export default {
   }
 </script>
-<style scoped>
+<style>
+  @font-face {
+    font-family: 'MADE Evolve Sans Medium';
+    src: local('MADE Evolve Sans Medium'), url('./assets/fonts/Made.otf') format('truetype');
+  }
+  .app {
+    font-family: 'MADE Evolve Sans Medium';
+  }
 </style>

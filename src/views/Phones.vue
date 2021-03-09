@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="contaner mx-auto">
-      <div class="delivery bg-gray-200 text-gray-900">
+      <div class="delivery text-gray-900">
         <div class="navbar">
           <Header/>
         </div>
         <div class="grid-cols-2 container mx-auto">
-          <div class="col-span-2 text-center mt-12">
-            <h2 class="text-4xl font-semibold">Совместимые устройства</h2>
+          <div class="col-span-2 text-center pt-40">
+            <h2 class="text-4xl font-semibold pb-4">Совместимые устройства</h2>
             <hr>
           </div>
-          <div class="col-span-2 mt-24 px-2 font-semibold">
+          <div class="col-span-2 mt-12 px-2 font-semibold">
             <h4 class="mt-4 text-xl">Iphone:</h4>
             <li class="text-lg mt-4">Iphone Xr</li>
             <li class="text-lg">Iphone Xs</li>
@@ -62,10 +62,8 @@ export default {
 }
 </script>
 <style scoped>
-  .navbar {
-     background: #667db6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .delivery {
+    background: #fafafa;
   }
   .link {
     margin-top: 30px;

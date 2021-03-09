@@ -1,35 +1,52 @@
 <template>
-  <div>
-    <div class="vld-parent">
-        <loading :active.sync="isLoading" 
-        :can-cancel="true" 
-        color="#00D2FC"
-        loader="dots"
-        :on-cancel="onCancel"
-        background="#fff"
-        opacity="1"
-        ></loading>
-    </div>
+  <div class="bg-white"> 
     <div class="home">
-      <Header/>
-      <div v-scrollanimation class="justify-center text-center header-font text-white font-sans lg:mt-4 xl:mt-4 mt-8 ">
-        <h1 class="xl:text-4xl lg:text-4xl text-3xl font-semibold tracking-tight sm:text-2xl">Поделитесь своими социальными сетями<br/>и бизнесом одним касанием</h1>
-        <p class="text-lg">Поднимите свою жизнь на новый уровень!</p>
+      <Header class="" />
+      <div class="vld-parent" v-show="isLoading">
+        <half-circle-spinner v-show="isLoading"
+                            :animation-duration="1000"
+                            :size="80"
+                            color="#ffffff"
+                            class="mx-auto mt-48"
+        />
       </div>
-      <div class="grid-cols-12 mb-20 mt-3 lg:mb-20 xl:mb-20 header-u">
-        <img v-scrollanimation class="object-contain header w-full" src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/iphone-12-pro-family-hero-Recovered.png?alt=media&token=185e491c-c8a9-4f71-b115-a619cfc8430b" alt="">
+      <div class="container mx-0 lg:mx-auto md:mx-auto xl:mx-auto px-0">
+        <div class="header">
+          <div class="text-center text-white lg:mt-4 xl:mt-0 py-48 md:py-64 xl:py-64 lg:py-64 ">
+            <h1 class="xl:text-4xl lg:text-4xl text-3xl font-semibold sm:text-2xl pb-0 md:pb-24 lg:pb-24 xl:pb-24">Поделитесь своими социальными сетями<br/>и бизнесом одним касанием</h1>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="section container mx-auto"> 
+      <div class="slider mt-10 px-4 lg:px-0 xl:px-0 md:px-0">
+          <h4 class="text-4xl text-center font-semibold mt-4">Цветное издание</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 mt-10" >
+            <div class="flex flex-col text-center mt-4" v-for="(slide, index) in product.slice(0, 4)" :key="slide.id">
+              <router-link tag="a" :to="{name: 'Add', params: {id: slide.id}}" class="flex flex-col">
+                <img class="w-32 mx-auto" :src="slide.image" alt="">
+                <h5 class="mt-12 font-semibold text-xl">{{ slide.option }}</h5>
+                <p class="text-lg">{{ slide.cost }} сум</p>
+              </router-link>
+              <button @click="addProduct(index, slide.image, slide.option, slide.cost)" class="mt-4 border-2 transition-all border-gray-900 py-3 text-lg
+               text-black duration-300 hover:bg-black hover:text-white">Добавить в корзину</button>
+            </div>
+          </div>  
+        </div>
+        <div class="text-center">
+          <router-link tag="button" to="/all" class="mx-auto border-2 border-black mt-10 py-2 px-4 bg-black transition-all text-white duration-300 hover:bg-white hover:text-gray-900 text-lg">Показать все</router-link>
+        </div>
     </div>
     <div class="section-1 text-white">
-      <div class="container mx-auto mt-12 mb-12 px-4 xl:px-0 lg:px-0">
+      <div class="container mx-auto mt-10 mb-12 px-4 xl:px-0 lg:px-0">
         <div v-scrollanimation class="section-info text-center pt-8">
-          <h2 class="text-4xl font-semibold">Как работает PROTAG</h2>
-          <p class="text-xl mb-8">Работает очень просто!</p>
+          <h2 class="text-2xl xl:text-4xl md:text-4xl lg:text-4xl font-semibold">Как работает PROTAG</h2>
+          <p class="text-lg md:text-xl lg:text-xl xxl:text-xl mb-8">Работает очень просто!</p>
         </div>
         <div class="grid grid-cols-2 pt-8">
           <div class="col-span-2 xl:col-span-1 lg:col-span-1 px-4">
             <div v-scrollanimation class="border-info border-solid border-2 border-white rounded-lg px-4 py-4 w-auto mb-8">
-              <h3 class="text-xl text-center">Другим людям <b>не</b> нужно никаких приложений или чего-либо, чтобы Protag работал,<b> им также не нужно иметь Protag!</b></h3>
+              <h3 class="text-xl text-center">Другим людям <b class="font-semibold">не</b> нужно никаких приложений или чего-либо, чтобы Protag работал,<b class="font-semibold"> им также не нужно иметь Protag!</b></h3>
             </div>
             <div v-scrollanimation class="icon-phone text-center pt-4 pb-8">
               <i class="fab fa-apple text-5xl"></i>
@@ -63,118 +80,8 @@
         </div>
       </div>
     </div>
-    <div class="section-2">
-      <div class="container mx-auto">
-        <div class="mb-12 grid grid-cols-4 gap-4 sm:flex-1 px-4">
-          <div class="col-span-4 xl:col-span-2 lg:col-span-2">
-            <div class="sample-2 ml-1">
-              <img v-scrollanimation class="rounded shadow-xl w-full md:h-full" src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/Designer1.jpg?alt=media&token=dc03d353-a41d-43a1-bbcb-26aee8a12572" alt="">
-            </div>
-          </div>
-          <div class="col-span-4 xl:col-span-2 lg:col-span-2">
-            <h2 v-scrollanimation class="text-gray-800 text-3xl xl:mt-8 xl:ml-12">Управляйте ссылками с помощью собственного профиля PROTAG!</h2>
-            <p v-scrollanimation class="text-gray-800 font-semibold xl:ml-12 mt-4">Когда вы покупаете Protag, вы получаете профиль Protag, который позволяет легко размещать и управлять всеми вашими ссылками в одном месте! Вы можете использовать свой профиль Protag в своей биографии в Instagram, чтобы люди могли найти то, чем вы хотели бы поделиться. У вас есть полный контроль над своим профилем, поэтому вы можете выбрать, чем хотите поделиться, и изменить его в любое время!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-3">
-      <div class="container mx-auto">
-        <div v-scrollanimation class="section-3-info text-center mb-8 px-0 lg:px-40 xl:px-40">
-          <h2 class="xl:text-4xl lg:text-4xl text-2xl font-semibold text-gray-800">Откройте для себя все преимущества</h2>
-          <h2 class=" xl:text-4xl lg:text-4xl text-2xl font-semibold text-gray-800">Превосходное удобство использования и множество функций!</h2>
-        </div>
-        <div class="flex-col xl:grid lg:grid grid-cols-3 gap-4 px-4 xl:px-0 lg:px-0">
-          <div class="col-span-3 xl:col-span-1 lg:col-span-1">
-            <div class="grid grid-cols-2 gap-4 mx-auto text-white h-56">
-              <div v-scrollanimation class="col-span-2 xl:col-span-1 lg:col-span-1 icon-bgl h-56 rounded text-center pt-16 px-2">
-                <i class="fas fa-mobile-alt text-5xl"></i>
-                <p class="pt-3">Делись соц. сетями в прикосновение</p>
-              </div>
-              <div v-scrollanimation class="col-span-2 xl:col-span-1 lg:col-span-1 icon-bg h-56 rounded text-center pt-16 px-2">
-                <i class="far fa-smile text-5xl"></i>
-                <p class="pt-3">Другому человеку не нужно иметь Protag</p>
-              </div>
-              <div v-scrollanimation class="col-span-2 xl:col-span-1 lg:col-span-1 icon-bg h-56 rounded text-center pt-16 px-2">
-                <i class="fab fa-app-store text-5xl"></i>
-                <p class="pt-3">Приложение не требуется</p>
-              </div>
-              <div v-scrollanimation class="col-span-2 xl:col-span-1 lg:col-span-1 icon-bgl h-56 rounded text-center pt-16 px-2">
-                <i class="fas fa-cog text-5xl"></i>
-                <p class="pt-3">Простая настройка</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-span-3 slide-margin lg:col-span-2 xl:col-span-2">
-            <Slider v-scrollanimation/>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-4">
-      <div class="container mx-auto">
-        <div v-scrollanimation class="tag text-center mb-16 px-4 xl:px-48 lg:px-48">
-          <h2 class="text-4xl text-gray-800">Выберите свой <b class="color-text">PROTAG</b></h2>
-          <p>Выберите подходящие условия для вашей жизни или бизнеса и используйте приложение PROTAG с максимальной эффективностью!</p>
-        </div>
-        <div class="grid grid-cols-5 gap-4 px-4 xl:px-0 lg:px-0">
-          <div v-scrollanimation class="xl:col-start-2 xl:col-end-3 lg:col-start-2 lg:col-end-3 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6  mb-4 xl:mb-12 lg:mb-12">
-            <div class="tag-photo text-center text-white">
-              <SliderProduct />  
-            </div>
-            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
-              <h4 class="text-blue-600 font-semibold">{{ product.amountSimple }} сум</h4>
-              <p class="px-4 xl:px-0 lg:px-0">Цветное издание.</p>
-            </div>
-            <div class="tag-info text-center">
-              <div class="flex">
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-blue-500"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-indigo-500"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-red-500"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-yellow-300"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-pink-400"></li>
-                <li class="w-5 h-5 rounded-full mx-auto my-3 block shadow-inner bg-black"></li>
-              </div><hr>
-              <p class="py-3">Выберите цвет.</p> <hr>
-              <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
-            </div>
-          </div>    
-          <div v-scrollanimation class="xl:col-start-3 xl:col-end-4 lg:col-start-3 lg:col-end-4 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6  mb-4 xl:mb-12 lg:mb-12">
-            <div class="tag-photo text-center text-white">
-              <SliderLimited />
-            </div>
-            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
-              <h4 class="text-blue-600 font-semibold">{{ product.amountLimited }} сум</h4>
-              <p class="px-4 xl:px-0 lg:px-0">Limited Edition:</p>
-            </div>
-            <div class="tag-info text-center">
-              <p class="pb-3 xl:pb-2 lg:pb-2 pt-3">Выберите цвет.</p><hr>
-              <p class="py-3">Посмотреть доступные</p> <hr>
-              <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
-            </div>
-          </div>
-          <div v-scrollanimation class="xl:col-start-4 xl:col-end-5 lg:col-start-4 lg:col-end-5 col-span-5 bg-gray-100 rounded shadow-2xl py-8 px-6 mb-8 xl:mb-12 lg:mb-12">
-            <div class="tag-photo rounded-full w-24 h-42 mx-auto text-center text-white">
-              <img src="https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/custom-logo.png?alt=media&token=37c5d606-853e-44eb-98dd-589832104c09" alt="">
-            </div>
-            <div class="tag-price text-center pt-8 sm:pt-8 lg:pt-6 md:pt-6">
-              <h4 class="text-blue-600 font-semibold">{{ product.amountCustom }} сум</h4>
-              <p class="px-4 xl:px-0 lg:px-0">Ваш собственный логотип!</p>
-            </div>
-            <div class="tag-info text-center">
-              <p class="pb-3 xl:pb-2 lg:pb-2 pt-3">Ваш логотип</p><hr>
-              <p class="py-3">Подробнее</p> <hr>
-              <a href="https://t.me/protag1"><button  class="learn rounded-full px-8 py-2 mt-4 lg:mt-2 xl:mt-2 text-white">Купить</button></a>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <div>
-    </div>
-    <a @click="scrollTop" v-show="visible" class="bottom-right mb-12 text-white scrool-bg w-12 h-12 rounded-full text-center pt-3">
-      <i class="fas fa-angle-up"></i>
+    <a @click="scrollTop" v-show="visible" class="bottom-right mb-12 text-white  w-12 h-12 rounded-full text-center pt-3">
+      <i class="fas fa-angle-up text-xl"></i>
     </a>
     <Footer/>
   </div>
@@ -182,12 +89,9 @@
 
 <script>
 import Header from '../components/Header.vue'
-import Slider from '../components/Slider.vue'
 import Footer from '../components/Footer.vue'
-import SliderLimited from '../components/SliderLimited'
-import Loading from 'vue-loading-overlay';
-import 'vue-loading-overlay/dist/vue-loading.css';
-import SliderProduct from '../components/SliderProduct';
+import { HalfCircleSpinner } from 'epic-spinners'
+
 export default {
   name: 'Home',
   data: () => ({
@@ -195,18 +99,18 @@ export default {
     animate: true,
     product: [],
     isLoading: true,
-    fullPage: false
+    quantity: 1
   }),
   async mounted() {
     this.product = await this.$store.dispatch('fetchAmount')
+    setTimeout(function() {
+    }, 1500)
     this.isLoading = false
-
     window.addEventListener('scroll', this.scrollListener)
     setTimeout(function () {
       return this.phone = true
     }, 1000)
-    console.log('Current Swiper instance object', this.swiper)
-      this.swiper.slideTo(3, 1000, false)
+   
   },
   methods: {
     scrollTop: function () {
@@ -215,14 +119,31 @@ export default {
           clearInterval(this.intervalId)
         }
         window.scroll(0, window.pageYOffset - 50)
-      }, 10)
+      }, 8)
     },
     scrollListener: function () {
       this.visible = window.scrollY > 150
     },
     turnOffAnimate(){
       this.animate=false;
-   }
+   },
+   addProduct(index, image, option, cost) {
+      const addShoes = {
+        option: option,
+        cost: cost,
+        image: image,
+        quantity: this.quantity,
+        id: index
+      }
+      this.$store.commit('addToCart', addShoes)
+      this.$store.commit('saveData')
+      this.$toasted.show("Добавлено!", { 
+        theme: "outline", 
+        position: "top-right", 
+        duration : 2000
+      });
+
+    }, 
   },
   computed: {
     swiper() {
@@ -231,42 +152,36 @@ export default {
   },
   components: {
     Header,
-    Slider,
     Footer,
-    Loading,
-    SliderProduct,
-    SliderLimited
+    HalfCircleSpinner,
   },
 }
 </script>
 
 <style scoped>
-  .home {
-    background: url("https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/back.jpg?alt=media&token=901c64c2-8b5f-4fb4-be26-6935ed8fc5cd");
-    height: 725px;
-    background-position: top; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    box-shadow: 0px 1px 10px -10px rgba(0,0,0,0.75);
-  }
-  .header-u {
-    height: 350px;
+  .vld-parent {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right top, #181818, #1e1e1f, #242526, #2b2b2d, #313234, #323334, #323335, #333435, #2d2e2f, #272828, #222222, #1c1c1c);
+    z-index: 100;
+    padding-top: 30px;
   }
   .header {
-    height: 340px;
-    margin-top: 10px;
-    z-index: -1;
-    opacity: 0.9;
-    overflow: hidden  
+    background: url('https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/back1.jpg?alt=media&token=f7ab52d5-c8ff-47d8-8671-f7a3e27f2075');
+    background-position: center top; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+
   }
   .sample {
     height: 500px;
     margin-top: 40px;
   }
   .section-1 {
-    background: #667db6;  
-    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to right top, #110f0f, #121111, #131313, #151415, #161616, #151515, #151515, #141414, #101010, #0b0b0b, #060606, #000000);
 
   }
   .create {
@@ -274,27 +189,17 @@ export default {
     opacity: 0.8;
     padding: 50px;
   }
-  .youtube {
-    margin-top: 15px;
-    width: 500px;
-    height: 258px;
-    opacity: 0.9;
-  }
-  .learn {
-    background: #009EFA;
-    color: #f0f0f0;
-    font-weight: 400;
-    transition: 0.8s linear;
-  }
+  
   .learn:hover {
     transition: 10ms;
-    background: #845EC2;
+    background: #2e2d2d;
   }
   .bottom-right {
     position: fixed;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
+    background: #2e2d2d;
   }
   .section-4 {
     background: url("https://firebasestorage.googleapis.com/v0/b/protaguz.appspot.com/o/3302180footer-min-min%20(1).png?alt=media&token=d81c4b18-0693-4d5b-85cf-8e8d16aa44ff") no-repeat;

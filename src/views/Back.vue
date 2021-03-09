@@ -41,7 +41,7 @@
           <div @click="updateBack(variant.variantColor)" :style="{ backgroundColor: variant.variantColor}" class="w-8 h-8 rounded-full mt-4 mx-1"></div>
         </div>
       </div>
-      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-6 mb-8 xl:mt-16 lg:mt-16 text-white">Сохранить</button>
+      <button @click.prevent="nextPage" @click="onUpload" class="mx-auto block focus:outline-none bg-blue-500 h-12 w-48 rounded-full mt-6 mb-8 xl:mt-16 lg:mt-16 text-white">Сохранить</button>
     </div>
   </div>
 </template>

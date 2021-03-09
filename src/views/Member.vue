@@ -57,26 +57,38 @@
           </div>
           <div v-if="user.profile.snapchat.length > 3" class="col-span-8 mx-auto">
             <a :href="user.profile.snapchat" class="flex shadow-2xl mt-1 text-2xl w-56 h-16 py-3 px-5 snapchat text-white">
-             <i class="fab fa-snapchat-ghost pt-2"></i>
+              <i class="fab fa-snapchat-ghost pt-2"></i>
               <p class="mx-auto">Snapchat</p>
             </a>
           </div>
           <div v-if="user.profile.whatsapp.length > 3" class="col-span-8 mx-auto">
             <a :href="('https://wa.me/' + user.profile.whatsapp)" class="flex shadow-2xl text-2xl mt-1 w-56 h-16 py-3 px-5 whatsapp text-white">
-             <i class="fab fa-whatsapp pt-2"></i>
+              <i class="fab fa-whatsapp pt-2"></i>
               <p class="mx-auto">WhatsApp</p>
             </a>
           </div>
           <div v-if="user.profile.phone.length > 3" class="col-span-8 mx-auto">
             <a :href="('tel:' + user.profile.phone)" class="flex shadow-2xl text-2xl w-56 mt-1 h-16 py-3 px-5 phone text-white">
-             <i class="fas fa-phone-alt pt-2"></i>
+              <i class="fas fa-phone-alt pt-2"></i>
               <p class="mx-auto">Phone</p>
             </a>
           </div>
           <div v-if="user.profile.youtube.length > 3" class="col-span-8 mx-auto mb-12">
             <a :href="user.profile.youtube" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 youtube text-white">
-             <i class="fab fa-youtube pt-2"></i>
+              <i class="fab fa-youtube pt-2"></i>
               <p class="mx-auto">YouTube</p>
+            </a>
+          </div>
+          <div v-if="user.profile.mail.length > 3" class="col-span-8 mx-auto">
+            <a :href="user.profile.mail" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 mail text-white">
+              <i class="fas fa-envelope pt-2"></i>
+              <p class="mx-auto">Email</p>
+            </a>
+          </div>
+          <div v-if="user.profile.website.length > 3" class="col-span-8 mx-auto mb-12">
+            <a :href="user.profile.website" class="flex shadow-2xl text-2xl w-56 h-16 mt-1 py-3 px-5 website text-white">
+              <i class="fas fa-compass pt-2"></i>
+              <p class="mx-auto">Website</p>
             </a>
           </div>
         </div>
@@ -169,6 +181,20 @@ export default {
     border-radius: 12px;
     width: 230px;
   }
+  .mail {
+    background-image: linear-gradient(to bottom, #1e54ee, #0082ff, #00a7ff, #00c8ff, #19e5ff);
+    border-radius: 12px;
+    width: 230px;
+  }
+  .website {
+background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 12px;
+    width: 230px;
+  }
+
   @media screen and (min-width: 300px) and (max-width: 340px) {
     .img-mobile {
       width: 80px;

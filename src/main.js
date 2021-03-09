@@ -7,8 +7,8 @@ import VModal from 'vue-js-modal'
 import Vuelidate from 'vuelidate'
 import ScrollAnimation from './directives/scrollanimation.js'
 import VueSplide from '@splidejs/vue-splide';
+import Toasted from 'vue-toasted';
 
-Vue.use( VueSplide );
 
 
 import firebase from 'firebase/app'
@@ -19,6 +19,8 @@ import 'firebase/storage'
 
 Vue.use(VModal)
 Vue.use(Vuelidate)
+Vue.use( VueSplide );
+Vue.use(Toasted)
 Vue.directive('scrollanimation', ScrollAnimation)
 
 Vue.config.productionTip = false
