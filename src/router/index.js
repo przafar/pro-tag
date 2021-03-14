@@ -15,8 +15,6 @@ import Help from '../views/Help.vue'
 import Contacts from '../views/Contacts.vue'
 import Add from '../views/Add.vue'
 import Order from '../views/Order.vue'
-import Admin from '../views/Admin.vue'
-
 import All from '../views/All.vue'
 import NotFound from '../views/NotFound.vue'
 
@@ -88,12 +86,6 @@ const router = new VueRouter({
       name: "Back",
       component: Back,
       meta: {layout: 'Back', auth: true}
-    },
-    {
-      path: '/admin',
-      name: "admin",
-      component: Admin,
-      meta: {layout: 'Admin', auth: true}
     },
     {
       path: '/done',
