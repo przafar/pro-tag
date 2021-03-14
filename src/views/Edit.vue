@@ -74,9 +74,9 @@
         
       </div>
       <div v-else>
-        <div class="container mx-auto mt-12">
+        <div class="container mx-auto mt-12 start">
           <router-link to="/user">
-            <button class="mx-auto block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 mb-8 text-white">Начать</button>
+            <button class="mx-auto  block focus:outline-none bg-blue-500 font-semibold h-12 w-48 rounded-full mt-4 text-white">Начать</button>
           </router-link>
         </div>
       </div>    
@@ -137,6 +137,10 @@ export default {
   }
   .logot {
     padding-top: 1px;
+  }
+  .start {
+    padding-top: 30px;
+    padding-bottom: 420px;
   }
   @media screen and (min-width: 280px) and (max-width: 320px) {
     .back-color {

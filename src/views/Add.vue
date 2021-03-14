@@ -26,11 +26,11 @@
               <button @click="addProduct" class="border-2 border-black w-full hover:border-gray-900 text-black hover:text-gray-800 py-3 transition-all duration-200">Добавить в корзину</button>
             </div>
             <div class="mt-4">
-              <button class="border bg-black hover:bg-gray-900 transition-all duration-200 text-white border-black w-full py-3">Купить</button>
+              <button @click="check" class="border bg-black hover:bg-gray-900 transition-all duration-200 text-white border-black w-full py-3">Купить</button>
             </div>
             <div class="flex items-center justify-between mt-8 border-t-2 border-gray-800 pt-0">
-              <div class="">
-                <h5 class="text-xl my-3">Product info</h5>
+              <div class="w-full cursor-pointer"  @click="showen">
+                <h5 class="text-xl my-3 ">Информация о продукте</h5>
               </div>
               <div class="justify-end">
                 <i v-if="!show" @click="showen" class="fas cursor-pointer fa-plus text-xl"></i>
@@ -41,7 +41,7 @@
               <p>{{ product.info }}</p>
             </div>
             <div class="flex items-center justify-between mt-2 pt-0 border-t-2 border-gray-800">
-              <div class="mb-3 my-3">
+              <div class="mb-3 my-3 w-full cursor-pointer" @click="showen1">
                 <h5 class="text-xl">Политика возврата</h5>
               </div>
               <div class="justify-end mb-0 mt-0">
@@ -113,6 +113,13 @@ export default {
     backRoute() {
       this.$router.go(-1)
     },
+    check() {
+      this.$toasted.show("Временно не работает!", { 
+        theme: "outline", 
+        position: "top-right", 
+        duration : 2000
+      });
+    }
   },
   components: {
     Header,

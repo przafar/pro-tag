@@ -2,7 +2,7 @@
   <div class="back-color">
     <div :style="{ backgroundColor: user.profile.back }" class="h-48 w-full token-color mx-auto">
       <div class="container">
-        <a href="/" class="block w-12 ml-4 pt-4">
+        <router-link to="/" tag="a" class="block w-12 ml-4 pt-4">
           <svg width="45" height="48" xmlns="http://www.w3.org/2000/svg">
             <g>
               <g transform="matrix(0.020405896916177363,0,0,-0.019514957865699397,0.5058253301220254,162.44456588265285) " id="e79jovkio88j2">
@@ -12,7 +12,7 @@
               </g>
             </g>
           </svg>
-        </a>
+        </router-link>
       </div>
     </div>
     <div class="container member mx-auto px-5 pb-20">
@@ -187,9 +187,7 @@ export default {
     width: 230px;
   }
   .website {
-    background: #00B4DB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: radial-gradient(circle, #44cffa, #44cffa, #44cffa, #44cffa, #44cffa, #39c3f2, #2fb8ea, #26ace1, #1493cd, #087ab7, #0862a1, #0d4a89);
     border-radius: 12px;
     width: 230px;
   }

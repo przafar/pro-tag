@@ -8,17 +8,17 @@
         <div class="grid-cols-2 container mx-auto px-4 xl:px-0 lg:px-0 md:px-4">
           <div class="col-span-2 pt-40">
             <h3 class="text-center text-3xl">Часто задаваемые вопросы</h3>
-            <div v-for="(post, index) in questions" :key="index">
-              <div class="flex items-center justify-between mt-8 border-t-2 border-gray-800 pt-0">
-                <div class="">
-                  <h5 class="text-xl my-3">{{ post.question }}</h5>
+            <div v-for="(post, index) in questions" :key="index" class="mt-8">
+              <div class="flex items-center justify-between border-t-2 border-gray-800 pt-0" >
+                <div class="w-full cursor-pointer" @click="postUserId = index; isShow = !isShow">
+                  <h5 class="text-xl mt-8">{{ post.question }}</h5>
                 </div>
-                <div @click="toggle(index)" class="justify-end">
-                  <i v-if="!(isShow && postUserId == index)" @click="postUserId = index; isShow = true" class="fas cursor-pointer fa-plus text-xl"></i>
+                <div @click="toggle(index)" class="justify-end mt-8">
+                  <i v-if="!(isShow && postUserId == index)" @click="postUserId = index; isShow = !isShow" class="fas cursor-pointer fa-plus text-xl"></i>
                   <i @click="postUserId = index; isShow = false" v-else class="fas cursor-pointer fa-minus text-xl"></i>
                 </div>
               </div>
-              <div v-show="isShow && postUserId == index">
+              <div v-show="isShow && postUserId == index" class="pt-5">
                 <p>{{ post.answer }}</p>
               </div>
             </div>
