@@ -98,7 +98,7 @@ export default {
     visible: false,
     animate: true,
     product: [],
-    isLoading: true,
+    isLoading: false,
     quantity: 1
   }),
   async mounted() {
